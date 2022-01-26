@@ -1,140 +1,76 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/* css form */
+* {
+  margin: 0px;
+  padding: 0px;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+
+.contain {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 81.1vh;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid gold;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+.form {
+  background: #fff;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+form label {
   display: block;
 }
-body {
-  line-height: 1;
+form p {
+  margin: 0;
 }
-ol,
-ul {
-  list-style: none;
+
+.full-width {
+  grid-column: 1 / 3;
 }
-blockquote,
-q {
-  quotes: none;
+
+button,
+input,
+textarea {
+  padding: 1em;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+
+button {
+  background: lightgrey;
+  width: 100%;
+  border: 0;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+.contact {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 header {
   width: 100%;
-  background-color: red;
+  background-color: #a6cbde;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 70px;
 }
 
 footer {
@@ -147,4 +83,33 @@ footer {
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
   color: white;
+}
+
+main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 50px;
+}
+
+@media (min-width: 600px) {
+  .contain {
+    padding: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .wrapper > * {
+    padding: 2em 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .form form {
+    display: flex;
+    flex-direction: column;
+  }
 }
