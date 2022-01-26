@@ -31,7 +31,7 @@ button {
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 form label {
   display: block;
@@ -47,13 +47,14 @@ form p {
 button,
 input,
 textarea {
-  padding: 1em;
+  min-height: 3em;
 }
 
 button {
   background: lightgrey;
   width: 100%;
   border: 0;
+  border-bottom: 1px solid #000;
 }
 
 .contact {
