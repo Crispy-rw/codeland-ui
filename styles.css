@@ -32,7 +32,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 40px;
-  column-gap: 120px;
+  column-gap: 250px;
 }
 form label {
   display: block;
