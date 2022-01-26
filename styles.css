@@ -31,7 +31,8 @@ button {
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  row-gap: 40px;
+  column-gap: 120px;
 }
 form label {
   display: block;
@@ -61,8 +62,8 @@ button {
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 header {
@@ -90,6 +91,16 @@ main {
   padding-top: 50px;
   padding-bottom: 50px;
   height: 50px;
+}
+
+.btn {
+  width: 100px;
+}
+
+.send-receive {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
 }
 
 @media (min-width: 700px) {
