@@ -19,11 +19,14 @@ $(document).ready(() => {
   phone.keypress(function (e) {
     phone_focused = true;
     if ($(this).val().length <= 8 && $(this).val().length <= 10) {
-      $('#phone-error').show();
+      $('#phone-error').css('visibility', 'visible');
+      phone.addClass('border-red');
+      phone.addClass('red');
     } else {
       $('#phone-error').hide();
       phone.removeClass('red');
       phone.removeClass('border-red');
+      $('#phone-error').css('visibility', 'hidden');
     }
   });
 
@@ -46,11 +49,11 @@ $(document).ready(() => {
       email.addClass('red'); //Add a class so that placeholder will be red.
       email.addClass('border-red');
     } else if (!email.val().match(emailRegex)) {
-      $('#email-error').show();
+      $('#email-error').css('visibility', 'visible');
     } else if (email.val().length > 0 && email.val().match(emailRegex)) {
       email.removeClass('red');
       email.removeClass('border-red');
-      $('#email-error').hide();
+      $('#email-error').css('visibility', 'hidden');
     }
     if (phone.val().trim() === '') {
       //Check if empty string
@@ -61,7 +64,7 @@ $(document).ready(() => {
     } else {
       phone.removeClass('red');
       phone.removeClass('border-red');
-      $('#phone-error').toggle();
+      $('#phone-error').css('visibility', 'hidden');
     }
     if (company.val().trim() === '') {
       //Check if empty string

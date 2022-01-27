@@ -32,7 +32,7 @@ button {
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 40px;
+  row-gap: 36px;
   column-gap: 130px;
 }
 form label {
@@ -91,7 +91,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 40px;
   color: white;
   font-family: 'Montserrat';
   font-size: 16px;
@@ -109,6 +109,25 @@ main {
 
 .btn {
   width: 100px;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #21292d;
+}
+
+#send {
+  background-color: #a5cbdd;
+}
+
+#send:hover {
+  background-color: #21292d;
 }
 
 .send-receive {
@@ -117,20 +136,14 @@ main {
   column-gap: 50px;
 }
 
-@media (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-  .wrapper > * {
-    padding: 2em 2em;
-  }
-}
-
 @media (max-width: 768px) {
   .form form {
     display: flex;
     flex-direction: column;
+  }
+
+  .contain {
+    padding: 2px;
   }
 }
 
@@ -156,7 +169,7 @@ main {
 .error {
   color: red;
   font-family: 'Courier New', Courier, monospace;
-  display: none;
+  visibility: hidden;
 }
 
 .border-red {
