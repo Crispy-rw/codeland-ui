@@ -81,7 +81,9 @@ $(document).ready(() => {
       phone.val(''); //Remove the value so that youll see the new attribute
       phone.addClass('red'); //Add a class so that placeholder will be red.
       phone.addClass('border-red');
+      // console.log('Here');
     } else if (testPhoneLen()) {
+      // console.log('Test Here');
       $('#phone-error').css('visibility', 'visible');
     } else {
       phone.removeClass('red');
