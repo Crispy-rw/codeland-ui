@@ -10,43 +10,54 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
   </head>
   <body>
-  <header>
-  
-    <img src="data:image/png;base64,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" alt="Codeland Img">
+    <header>
+      <img
+        src="data:image/png;base64,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"
+        alt="Codeland Img"
+      />
+    </header>
+    <div class="contain">
+      <div class="form">
+        <h3 class="contact">Contact Us!</h3>
+        <form id="form-id">
+          <p>
+            <input id="name" type="text" placeholder="Name" />
+          </p>
+          <p>
+            <input id="email" placeholder="Email" type="text" />
+            <span class="error" id="email-error"
+              >*Your Email should be valid</span
+            >
+          </p>
+          <p>
+            <input id="phone" type="text" placeholder="Phone" />
+            <span id="phone-error" class="error"
+              >*Phone should contains numbers between 8 to 10 digits</span
+            >
+          </p>
+          <p>
+            <input id="company" type="text" placeholder="Company" />
+          </p>
+          <p class="full-width">
+            <textarea
+              id="message"
+              placeholder="Your Message"
+              name=""
+              id=""
+              cols="30"
+              rows="4"
+            ></textarea>
+          </p>
+          <p class="full-width send-receive">
+            <button type="submit" id="send" class="btn">Send</button>
+            <button id="reset" class="btn">Reset</button>
+          </p>
+        </form>
+      </div>
+    </div>
 
-  </header>
-  <div class="contain">
-  <div class="form">
-    <h3 class="contact">Contact Us!</h3>
-    <form id='form-id'>
-      <p>
-        <input id="name" type="text" placeholder="Name">
-      </p>
-      <p>
-        <input id="email" placeholder="Email" type="text">
-        <span class="error" id="email-error">*Your Email should be valid</span>
-      </p>
-      <p>
-        <input id="phone" type="text" placeholder="Phone">
-        <span id="phone-error" class="error">*Phone should contains numbers between 8 to 10 digits</span>
-      </p>
-      <p>
-        <input id="company" type="text" placeholder="Company">
-      </p>
-      <p class="full-width">
-        <textarea id="message" placeholder="Your Message" name="" id="" cols="30" rows="4"></textarea>
-      </p>
-      <p class="full-width send-receive">
-        <button type="submit" id="send" class="btn">Send</button>
-        <button id="reset" class="btn">Reset</button>
-      </p>
-    </form>
-  </div>
-</div>
-</div>
+    <footer>&copy; CODELAND 2020</footer>
 
-<footer>&copy; CODELAND 2020</footer>
-
-<script src="./js/script.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
