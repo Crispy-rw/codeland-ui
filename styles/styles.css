@@ -32,7 +32,7 @@ button {
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 20px;
+  row-gap: 40px;
   column-gap: 130px;
 }
 form label {
@@ -50,8 +50,12 @@ button,
 input,
 textarea {
   min-height: 2em;
-  font-size: 1.2em;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0em;
 }
 
 button {
@@ -62,11 +66,14 @@ button {
 }
 
 .contact {
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: 'Montserrat';
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+  letter-spacing: 0em;
 }
 
 header {
@@ -85,9 +92,13 @@ footer {
   justify-content: center;
   align-items: center;
   height: 50px;
-  font-weight: bolder;
-  font-family: 'Courier New', Courier, monospace;
   color: white;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
 }
 
 main {
@@ -145,5 +156,9 @@ main {
 .error {
   color: red;
   font-family: 'Courier New', Courier, monospace;
-  visibility: hidden;
+  display: none;
+}
+
+.border-red {
+  border-bottom: 1px red solid;
 }
