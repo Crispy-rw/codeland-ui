@@ -16,6 +16,7 @@ $(document).ready(() => {
     phone_focused = true;
   });
 
+  // Validate Phone input on change
   phone.keypress(function (e) {
     phone_focused = true;
     if ($(this).val().length <= 8 && $(this).val().length <= 10) {
@@ -30,6 +31,7 @@ $(document).ready(() => {
     }
   });
 
+  // Validate Form on submit
   $('#form-id').submit(function (e) {
     e.preventDefault(); //Prevent the form on sending
     //Add event listener on form and not on btn click
