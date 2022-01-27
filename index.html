@@ -6,8 +6,8 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
   </head>
   <body>
   <header>
@@ -18,15 +18,17 @@
   <div class="contain">
   <div class="form">
     <h3 class="contact">Contact Us!</h3>
-    <form action="">
+    <form id='form-id'>
       <p>
         <input id="name" type="text" placeholder="Name">
       </p>
       <p>
         <input id="email" placeholder="Email" type="text">
+        <span class="error">Phone should be valid</span>
       </p>
       <p>
         <input id="phone" type="text" placeholder="Phone">
+        <span class="error" >Phone should contains from 8 to 10 digits</span>
       </p>
       <p>
         <input id="company" type="text" placeholder="Company">
@@ -35,7 +37,7 @@
         <textarea id="message" placeholder="Your Message" name="" id="" cols="30" rows="7"></textarea>
       </p>
       <p class="full-width send-receive">
-        <button id="send" class="btn">Send</button>
+        <input type="submit" class="btn" value="Submit">
         <button id="reset" class="btn">Reset</button>
       </p>
     </form>
