@@ -17,22 +17,33 @@ $(document).ready(() => {
   });
 
   // Validate Phone input on change
-  phone.keypress(function (e) {
+  phone.keydown(function (e) {
     phone_focused = true;
-    if ($(this).val().length <= 8 && $(this).val().length <= 10) {
+    if (
+      ($(this).val().length >= 0 && $(this).val().length < 8) ||
+      $(this).val().length > 10
+    ) {
       $('#phone-error').css('visibility', 'visible');
       phone.addClass('border-red');
       phone.addClass('red');
     } else {
-      $('#phone-error').hide();
       phone.removeClass('red');
       phone.removeClass('border-red');
       $('#phone-error').css('visibility', 'hidden');
     }
   });
 
+  $('#reset').on('click', function (evt) {
+    evt.preventDefault();
+    resetName();
+    resetPhone();
+    resetCompany();
+    resetMessage();
+    resetEmail();
+  });
+
   // Validate Form on submit
-  $('#form-id').submit(function (e) {
+  $('#send').on('click', function (e) {
     e.preventDefault(); //Prevent the form on sending
     //Add event listener on form and not on btn click
     if ($('#name').val().trim() === '') {
@@ -86,5 +97,46 @@ $(document).ready(() => {
     } else {
       message.removeClass('red');
     }
+    // alert(
+    //   `name ${name} \n Email: ${email} \n Phone: ${phone} \n Company: ${company} \n Message: ${message}`
+    // );
   });
+
+  //Reset function
+  function resetName() {
+    name.removeClass('red');
+    name.removeClass('border-red');
+    name.val('');
+    name.attr('placeholder', 'Name'); //Change attribute
+  }
+
+  function resetMessage() {
+    message.removeClass('red');
+    message.removeClass('border-red');
+    message.val();
+    message.attr('placeholder', 'Message'); //Change attribute
+  }
+
+  function resetPhone() {
+    phone.removeClass('red');
+    phone.removeClass('border-red');
+    phone.val();
+    phone.attr('placeholder', 'Phone'); //Change attribute
+    $('#phone-error').css('visibility', 'hidden');
+  }
+
+  function resetCompany() {
+    company.removeClass('red');
+    company.removeClass('border-red');
+    company.val();
+    company.attr('placeholder', 'Company'); //Change attribute
+  }
+
+  function resetEmail() {
+    email.removeClass('red');
+    email.removeClass('border-red');
+    email.val();
+    email.attr('placeholder', 'Email'); //Change attribute
+    $('#email-error').css('visibility', 'hidden');
+  }
 });
